@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Silicon Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20240325/pngtree-abstract-technology-chip-processor-background-circuit-board-and-html-code-3d-image_15677714.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            position: relative;
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .carousel {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+            background: white;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let index = 0;
+            const images = document.querySelectorAll(".carousel img");
+            function showNextImage() {
+                images[index].classList.remove("active");
+                index = (index + 1) % images.length;
+                images[index].classList.add("active");
+            }
+            setInterval(showNextImage, 3000);
+            images[0].classList.add("active");
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-f5f4-5230-bd69-7777e94d2fbc/raw?se=2025-04-01T09%3A18%3A12Z&sp=r&sv=2024-08-04&sr=b&scid=ae1994e9-a82f-5d74-8ac1-80b572e83f54&skoid=dfdaf859-26f6-4fed-affc-1befb5ac1ac2&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-01T06%3A34%3A50Z&ske=2025-04-02T06%3A34%3A50Z&sks=b&skv=2024-08-04&sig=FnEJyT8IbZcrjjopKN0rQmEhc6eLlgwS%2ByowlDOSdug%3D" alt="Think Silicon Academy Logo">
+        <h1 style="margin-left: 15px; white-space: nowrap; flex-grow: 1; text-align: left;">Think Silicon Academy</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="carousel">
+        <img src="slide1.jpg" alt="Training Session 1">
+        <img src="slide2.jpg" alt="Training Session 2">
+        <img src="slide3.jpg" alt="Training Session 3">
+    </div>
+    
+    <section id="home">
+        <h2>Welcome to Think Silicon Academy</h2>
+        <p>Empowering the next generation of engineers with cutting-edge training.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Think Silicon Academy is dedicated to providing high-quality training in embedded systems, design verification, and more.</p>
+    </section>
+    
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <ul>
+            <li>Embedded Systems Programming</li>
+            <li>Design Verification and Validation</li>
+            <li>Linux Kernel Development</li>
+            <li>IoT and Automation</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@thinksiliconacademy.com</p>
+        <p>Phone: +1234567890</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Think Silicon Academy. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
