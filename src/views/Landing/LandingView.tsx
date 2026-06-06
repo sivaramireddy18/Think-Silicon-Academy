@@ -93,11 +93,28 @@ export const LandingView: React.FC<LandingViewProps> = ({ setView, setSelectedCo
             fontSize: '18px',
             color: 'var(--text-secondary)',
             maxWidth: '650px',
-            margin: '0 auto 40px auto',
+            margin: '0 auto 30px auto',
             lineHeight: 1.6
           }}>
             Transform into an industry-ready hardware systems engineer. Learn with ARM Cortex MCUs, write custom device drivers, validate Silicon IPs, and secure premium placements.
           </p>
+
+          <div style={{
+            fontStyle: 'italic',
+            fontSize: '14px',
+            color: 'var(--primary)',
+            backgroundColor: 'var(--bg-accent)',
+            borderLeft: '4px solid var(--primary)',
+            padding: '12px 20px',
+            maxWidth: '650px',
+            margin: '0 auto 35px auto',
+            borderRadius: '0 8px 8px 0',
+            textAlign: 'center',
+            fontWeight: 500,
+            lineHeight: 1.5
+          }}>
+            "The silicon revolution isn't just designed in labs—it is forged by engineers who master the bare metal. Step up, compile your destiny, and validate the future of computing."
+          </div>
 
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button onClick={() => {
