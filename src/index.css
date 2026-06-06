@@ -7,6 +7,7 @@
   --bg-card-hover: #1a2336;
   --bg-input: #1b2438;
   --bg-accent: #0f172a;
+  --bg-nav: rgba(9, 13, 22, 0.85);
   
   --primary: #06b6d4; /* Electric Cyan */
   --primary-glow: rgba(6, 182, 212, 0.3);
@@ -54,6 +55,7 @@
   --bg-card-hover: #f1f5f9;
   --bg-input: #f1f5f9;
   --bg-accent: #e2e8f0;
+  --bg-nav: rgba(255, 255, 255, 0.85);
   
   --primary: #0891b2;
   --primary-glow: rgba(8, 145, 178, 0.15);

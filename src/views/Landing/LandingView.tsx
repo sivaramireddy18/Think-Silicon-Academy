@@ -120,7 +120,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ setView, setSelectedCo
           maxWidth: '1000px',
           margin: '80px auto 0 auto',
           padding: '24px',
-          backgroundColor: 'rgba(18, 24, 38, 0.5)',
+          backgroundColor: 'var(--bg-card)',
           borderRadius: 'var(--radius-lg)',
           border: '1px solid var(--border-color)',
           backdropFilter: 'blur(8px)'
@@ -195,7 +195,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ setView, setSelectedCo
       </section>
 
       {/* Why Choose Us */}
-      <section style={{ padding: '80px 24px', backgroundColor: '#0b0f19', borderBottom: '1px solid var(--border-color)' }}>
+      <section style={{ padding: '80px 24px', backgroundColor: 'var(--bg-accent)', borderBottom: '1px solid var(--border-color)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
           <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>
             Core Methodology
@@ -300,7 +300,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ setView, setSelectedCo
       </section>
 
       {/* Salary & Placements Section */}
-      <section style={{ padding: '80px 24px', backgroundColor: '#0b0f19', borderBottom: '1px solid var(--border-color)' }}>
+      <section style={{ padding: '80px 24px', backgroundColor: 'var(--bg-accent)', borderBottom: '1px solid var(--border-color)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <div>
             <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>

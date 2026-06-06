@@ -69,7 +69,7 @@ function AppContent() {
 
       {/* Premium Dark Theme Footer */}
       <footer style={{
-        backgroundColor: '#05070a',
+        backgroundColor: 'var(--bg-accent)',
         borderTop: '1px solid var(--border-color)',
         padding: '50px 24px 30px 24px',
         color: 'var(--text-secondary)'

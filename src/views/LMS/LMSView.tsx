@@ -293,7 +293,7 @@ export const LMSView: React.FC<LMSViewProps> = ({ setView, selectedCourseId, set
           <div style={{
             width: '320px',
             borderRight: '1px solid var(--border-color)',
-            backgroundColor: 'rgba(18, 24, 38, 0.4)',
+            backgroundColor: 'var(--bg-accent)',
             overflowY: 'auto',
             padding: '24px',
             display: 'flex',

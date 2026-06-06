@@ -34,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setView }) => {
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      backgroundColor: 'rgba(9, 13, 22, 0.85)',
+      backgroundColor: 'var(--bg-nav)',
       backdropFilter: 'blur(12px)',
       borderBottom: '1px solid var(--border-color)',
       padding: '0 24px',
