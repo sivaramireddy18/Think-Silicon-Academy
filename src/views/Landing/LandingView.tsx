@@ -187,7 +187,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ setView, setSelectedCo
               Our simulator engines and lab guides model the exact debugging cycles you will encounter on silicon chips in production environments at companies like Qualcomm, Nvidia, and ARM."
             </p>
             <div style={{ borderLeft: '3px solid var(--primary)', paddingLeft: '16px' }}>
-              <div style={{ fontWeight: 700, fontSize: '16px' }}>Siva Rami Reddy</div>
+              <div style={{ fontWeight: 700, fontSize: '16px' }}>Narayana Raju S</div>
               <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>Founder, Think Silicon Academy</div>
             </div>
           </div>

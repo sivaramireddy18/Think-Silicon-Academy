@@ -318,7 +318,7 @@ const INITIAL_BLOGS: BlogPost[] = [
     content: 'Clock Domain Crossing (CDC) occurs when data is transferred from a clock domain running at frequency A to another running at frequency B. If setup or hold times are violated at the destination register, the flip-flop can enter a metastable state. To validate this in post-silicon, we employ sweep tests, scanning temperature and voltage rails to force the metastability to manifest, and then analyze waveform traces with high-bandwidth oscilloscopes. Key fixes include using 2-stage synchronizers, handshake protocols, or asynchronous FIFOs.',
     category: 'Silicon Validation',
     date: 'June 01, 2026',
-    author: 'Siva Rami Reddy (Founder)'
+    author: 'Narayana Raju S (Founder)'
   },
   {
     id: 'blog-2',
