@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppData } from '../context/AppDataContext';
-import { Cpu, BookOpen, Layers, Award, ShieldCheck, Briefcase, Terminal, MessageSquare, User, LogOut, Menu, X } from 'lucide-react';
+import { Cpu, BookOpen, Layers, Award, ShieldCheck, Briefcase, Terminal, MessageSquare, User, LogOut, Menu, X, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   currentView: string;
@@ -8,7 +8,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ currentView, setView }) => {
-  const { currentUser, logout } = useAppData();
+  const { currentUser, logout, theme, toggleTheme } = useAppData();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -117,6 +117,23 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setView }) => {
 
       {/* Auth Control */}
       <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <button
+          onClick={toggleTheme}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            color: 'var(--text-secondary)',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '8px',
+            borderRadius: '50%'
+          }}
+          title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        >
+          {theme === 'dark' ? <Sun size={18} color="var(--warning)" /> : <Moon size={18} color="var(--primary)" />}
+        </button>
         {currentUser ? (
           <>
             <button
@@ -217,6 +234,25 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setView }) => {
               </button>
             );
           })}
+          <button
+            onClick={toggleTheme}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: 'var(--text-primary)',
+              padding: '12px',
+              borderRadius: '8px',
+              textAlign: 'left',
+              cursor: 'pointer',
+              fontSize: '14px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}
+          >
+            {theme === 'dark' ? <Sun size={18} color="var(--warning)" /> : <Moon size={18} color="var(--primary)" />}
+            {theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          </button>
           <hr style={{ border: '0', borderTop: '1px solid var(--border-color)', margin: '8px 0' }} />
           {currentUser ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

@@ -97,6 +97,9 @@ interface AppDataContextType {
   completedLessons: Record<string, string[]>; // CourseID -> LessonIDs[]
   mockInterviewResults: { topic: string; score: number; feedback: string; date: string }[];
   
+  theme: 'dark' | 'light';
+  toggleTheme: () => void;
+  
   // Actions
   login: (email: string, role: User['role']) => boolean;
   logout: () => void;
@@ -334,6 +337,15 @@ const INITIAL_BLOGS: BlogPost[] = [
 // --- Context Provider Component ---
 
 export const AppDataProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    const saved = localStorage.getItem('tsa_theme');
+    return (saved === 'dark' || saved === 'light') ? saved : 'dark';
+  });
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('tsa_user');
     return saved ? JSON.parse(saved) : null;
@@ -379,6 +391,11 @@ export const AppDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
   });
 
   // Sync to local storage
+  useEffect(() => {
+    localStorage.setItem('tsa_theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   useEffect(() => {
     localStorage.setItem('tsa_user', JSON.stringify(currentUser));
   }, [currentUser]);
@@ -542,6 +559,8 @@ export const AppDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
   return (
     <AppDataContext.Provider value={{
       currentUser,
+      theme,
+      toggleTheme,
       courses,
       labs: INITIAL_LABS,
       submissions,
